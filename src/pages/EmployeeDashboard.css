@@ -1,0 +1,452 @@
+
+/* KHUNG GIAO DIỆN NHÂN VIÊN */
+
+.employee-layout {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    background: #f4f6fa;
+    color: #1e293b;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* THANH MENU BÊN TRÁI */
+
+.employee-sidebar {
+    width: 270px;
+    min-width: 270px;
+    height: 100vh;
+    background: #172554;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.employee-logo {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.employee-logo h2 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #60a5fa;
+}
+
+.employee-logo span {
+    margin-top: 6px;
+    font-size: 10px;
+    color: #cbd5e1;
+}
+
+.employee-menu {
+    flex: 1;
+    padding: 25px 15px;
+}
+
+.employee-menu-heading {
+    margin: 0 0 15px 12px;
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.employee-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    width: 100%;
+    padding: 14px 15px;
+    margin-bottom: 7px;
+    border: none;
+    border-radius: 9px;
+    background: transparent;
+    color: #cbd5e1;
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.employee-menu-item:hover {
+    background: #1e3a8a;
+    color: white;
+}
+
+.employee-menu-item.active {
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+}
+
+.employee-menu-item span {
+    font-size: 19px;
+}
+
+.employee-sidebar-bottom {
+    padding: 20px 15px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+}
+
+.employee-logout {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 15px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #cbd5e1;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.employee-logout:hover {
+    background: #991b1b;
+    color: white;
+}
+
+/* KHU VỰC NỘI DUNG */
+
+.employee-main {
+    flex: 1;
+    min-width: 0;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* THANH ĐẦU TRANG */
+
+.employee-header {
+    height: 100px;
+    min-height: 100px;
+    padding: 0 35px;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.employee-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #0f172a;
+}
+
+.employee-header p {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.employee-header-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.employee-avatar {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #1d4ed8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.employee-header-user div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.employee-header-user strong {
+    font-size: 13px;
+}
+
+.employee-header-user span {
+    font-size: 11px;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+/* NỘI DUNG CHÍNH */
+
+.employee-content {
+    padding: 30px 35px;
+}
+
+.employee-welcome {
+    margin-bottom: 25px;
+}
+
+.employee-welcome h1 {
+    margin: 0;
+    font-size: 25px;
+    color: #0f172a;
+}
+
+.employee-welcome p {
+    margin-top: 8px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* CÁC THẺ THÔNG TIN */
+
+.employee-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.employee-info-card {
+    padding: 24px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(15,23,42,0.03);
+}
+
+.info-card-icon {
+    font-size: 25px;
+}
+
+.employee-info-card p {
+    margin: 15px 0 8px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.employee-info-card h3 {
+    margin: 0;
+    font-size: 17px;
+    color: #1e293b;
+    overflow-wrap: anywhere;
+}
+
+/* CÁC KHUNG NỘI DUNG */
+
+.employee-section-card {
+    padding: 28px;
+    margin-bottom: 22px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(15,23,42,0.03);
+}
+
+.employee-section-card h3 {
+    margin: 0 0 18px;
+    color: #0f172a;
+    font-size: 18px;
+}
+
+.employee-section-card > p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.employee-primary-button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.employee-primary-button:hover {
+    background: #1d4ed8;
+}
+
+/* THÔNG TIN CÁ NHÂN */
+
+.employee-profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.employee-profile-grid div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.employee-profile-grid span {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.employee-profile-grid strong {
+    color: #1e293b;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* KHU VỰC CHẤM CÔNG */
+
+.employee-attendance-card {
+    text-align: center;
+    padding: 45px 25px;
+}
+
+.attendance-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.attendance-status {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 11px 18px;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #1d4ed8;
+    font-size: 13px;
+}
+
+.employee-section-card .attendance-note {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+/* TƯƠNG THÍCH ĐIỆN THOẠI VÀ MÁY TÍNH BẢNG */
+
+@media (max-width: 900px) {
+    .employee-sidebar {
+        width: 220px;
+        min-width: 220px;
+    }
+
+    .employee-header {
+        padding: 0 20px;
+    }
+
+    .employee-content {
+        padding: 25px 20px;
+    }
+
+    .employee-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .employee-layout {
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .employee-sidebar {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    .employee-logo {
+        height: 65px;
+        min-height: 65px;
+        padding: 0 15px;
+    }
+
+    .employee-logo h2 {
+        font-size: 22px;
+    }
+
+    .employee-logo span {
+        font-size: 9px;
+    }
+
+    .employee-menu {
+        display: flex;
+        gap: 6px;
+        padding: 8px;
+        overflow-x: auto;
+    }
+
+    .employee-menu-heading {
+        display: none;
+    }
+
+    .employee-menu-item {
+        width: auto;
+        min-width: max-content;
+        margin: 0;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .employee-sidebar-bottom {
+        display: none;
+    }
+
+    .employee-main {
+        height: auto;
+        flex: 1;
+    }
+
+    .employee-header {
+        height: 75px;
+        min-height: 75px;
+        padding: 0 15px;
+    }
+
+    .employee-header h2 {
+        font-size: 16px;
+    }
+
+    .employee-header p {
+        font-size: 11px;
+    }
+
+    .employee-avatar {
+        width: 35px;
+        height: 35px;
+    }
+
+    .employee-header-user strong {
+        font-size: 11px;
+    }
+
+    .employee-content {
+        padding: 20px 15px;
+    }
+
+    .employee-welcome h1 {
+        font-size: 21px;
+    }
+
+    .employee-profile-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .employee-section-card {
+        padding: 20px;
+    }
+}

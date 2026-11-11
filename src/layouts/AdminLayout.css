@@ -1,0 +1,242 @@
+
+/* TOÀN BỘ KHUNG GIAO DIỆN ADMIN */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.admin-layout {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background: #f4f6fa;
+    color: #1e293b;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+/* THANH MENU BÊN TRÁI */
+
+.admin-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 280px;
+    height: 100vh;
+
+    background: #172554;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    z-index: 1000;
+}
+
+.sidebar-logo {
+    height: 100px;
+    min-height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0 25px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sidebar-logo h2 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #60a5fa;
+}
+
+.sidebar-logo span {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #cbd5e1;
+}
+
+.sidebar-menu {
+    padding: 25px 15px;
+    flex: 1;
+}
+
+.menu-heading {
+    margin: 0 0 15px 12px;
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 14px 15px;
+    margin-bottom: 7px;
+
+    border-radius: 9px;
+
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.menu-item:hover {
+    background: #1e3a8a;
+    color: white;
+}
+
+.menu-item.active {
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+}
+
+.menu-icon {
+    font-size: 19px;
+}
+
+.sidebar-bottom {
+    padding: 20px 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    color: #94a3b8;
+    font-size: 12px;
+}
+
+/* KHU VỰC NỘI DUNG BÊN PHẢI */
+
+.admin-main {
+    width: calc(100% - 280px);
+    height: 100vh;
+
+    margin-left: 280px;
+
+    flex: 1;
+    min-width: 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* THANH ĐẦU TRANG */
+
+.admin-header {
+    height: 108px;
+    min-height: 108px;
+
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 35px;
+}
+
+.admin-header h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #0f172a;
+}
+
+.admin-header p {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.admin-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-avatar {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+
+    background: #dbeafe;
+    color: #1d4ed8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.admin-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.admin-user-info strong {
+    font-size: 13px;
+    color: #1e293b;
+}
+
+.admin-user-info span {
+    font-size: 11px;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+/* NỘI DUNG CÁC TRANG */
+
+.admin-content {
+    width: 100%;
+    max-width: none;
+
+    padding: 30px 35px;
+}
+
+/* GIAO DIỆN TRÊN MÀN HÌNH NHỎ */
+
+@media (max-width: 768px) {
+    .admin-sidebar {
+        width: 190px;
+    }
+
+    .admin-main {
+        width: calc(100% - 190px);
+        margin-left: 190px;
+    }
+
+    .admin-header {
+        padding: 0 15px;
+    }
+
+    .admin-content {
+        padding: 20px 15px;
+    }
+}

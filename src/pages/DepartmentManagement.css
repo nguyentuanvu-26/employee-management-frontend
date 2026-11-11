@@ -1,0 +1,382 @@
+
+.department-management {
+    width: 100%;
+    color: #172554;
+}
+
+/* Tiêu đề trang */
+
+.department-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.department-page-header h1 {
+    margin: 0 0 10px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.department-page-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 16px;
+}
+
+.department-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.department-add-button,
+.department-refresh-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 9px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.department-add-button {
+    background: #16a34a;
+}
+
+.department-add-button:hover {
+    background: #15803d;
+}
+
+.department-refresh-button {
+    background: #2563eb;
+}
+
+.department-refresh-button:hover {
+    background: #1d4ed8;
+}
+
+/* Thống kê */
+
+.department-statistics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-bottom: 26px;
+}
+
+.department-stat-card {
+    min-height: 120px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.03);
+}
+
+.department-stat-card span {
+    color: #64748b;
+    font-size: 15px;
+}
+
+.department-stat-card strong {
+    color: #2563eb;
+    font-size: 30px;
+}
+
+.department-stat-card .department-data-status {
+    font-size: 20px;
+}
+
+/* Khu vực tìm kiếm */
+
+.department-search-area {
+    padding: 25px;
+    margin-bottom: 26px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+}
+
+.department-search-area label {
+    display: block;
+    margin-bottom: 13px;
+    color: #475569;
+    font-weight: 600;
+}
+
+.department-search-area input {
+    width: 100%;
+    height: 46px;
+    padding: 0 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.department-search-area input:focus {
+    border-color: #2563eb;
+}
+
+/* Bảng dữ liệu */
+
+.department-table-container {
+    padding: 24px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 13px;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.03);
+}
+
+.department-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.department-table-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.department-table-header span {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.department-table-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.department-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.department-table th {
+    padding: 19px 14px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.department-table td {
+    padding: 20px 14px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #475569;
+    font-size: 14px;
+}
+
+.department-table td strong {
+    color: #172554;
+}
+
+.department-empty,
+.department-message {
+    padding: 35px !important;
+    text-align: center;
+    color: #64748b !important;
+}
+
+/* Nút thao tác */
+
+.department-action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.department-edit-button,
+.department-delete-button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.department-edit-button {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.department-edit-button:hover {
+    background: #2563eb;
+    color: white;
+}
+
+.department-delete-button {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+.department-delete-button:hover {
+    background: #dc2626;
+    color: white;
+}
+
+/* Hộp thoại thêm và sửa */
+
+.department-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.5);
+}
+
+.department-modal {
+    width: 100%;
+    max-width: 500px;
+    padding: 28px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.department-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.department-modal-header h2 {
+    margin: 0;
+    color: #172554;
+    font-size: 21px;
+}
+
+.department-modal-close {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 7px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.department-modal-close:hover {
+    background: #e2e8f0;
+}
+
+.department-form-group {
+    margin-bottom: 24px;
+}
+
+.department-form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #475569;
+    font-weight: 600;
+}
+
+.department-form-group input {
+    width: 100%;
+    height: 46px;
+    padding: 0 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+}
+
+.department-form-group input:focus {
+    border-color: #2563eb;
+}
+
+.department-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.department-cancel-button,
+.department-save-button {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.department-cancel-button {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+.department-cancel-button:hover {
+    background: #cbd5e1;
+}
+
+.department-save-button {
+    background: #2563eb;
+    color: white;
+}
+
+.department-save-button:hover {
+    background: #1d4ed8;
+}
+
+/* Thông báo */
+
+.department-success,
+.department-error {
+    margin-bottom: 18px;
+    padding: 13px 16px;
+    border-radius: 8px;
+}
+
+.department-success {
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.department-error {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Giao diện màn hình nhỏ */
+
+@media (max-width: 768px) {
+
+    .department-statistics {
+        grid-template-columns: 1fr;
+    }
+
+    .department-page-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .department-header-actions {
+        width: 100%;
+    }
+
+    .department-table-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+}
